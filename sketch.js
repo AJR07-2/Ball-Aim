@@ -30,13 +30,13 @@ function manageVelocity() {
     if (ball1[1] - width / 16 < 0 || ball1[1] + width / 16 > width) {
         velocityX -= velocityX * 2;
     }
-    if (ball1[0] - width / 16 < 0 || ball1[0] + width / 16 > width/2) {
+    if (ball1[0] - width / 16 < 0 || ball1[0] + width / 16 > width / 2) {
         velocityX1 -= velocityX1 * 2;
     }
     if (ball2[1] - width / 16 < 0 || ball2[1] + width / 16 > width) {
         velocityY -= velocityY * 2;
     }
-    if (ball2[0] - width / 16 < width/2 || ball2[0] + width / 16 > width) {
+    if (ball2[0] - width / 16 < width / 2 || ball2[0] + width / 16 > width) {
         velocityY1 -= velocityY1 * 2;
     }
     if (score % 5 == 0 && scoreTracked != score) {
@@ -66,7 +66,7 @@ function fireOrNot() {
         delay = 0;
     }
     else if (delay > 0) {
-        delay+=2;
+        delay += 2;
         fill("yellow");
         if (direction == "left") {
             circle(width / 2 - delay, posY, width / 32);
